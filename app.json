@@ -30,10 +30,11 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "googleServicesFile": "./ios/cans4booksapp/GoogleService-Info.plist",
+      "googleServicesFile": "./GoogleService-Info.plist",
       "bundleIdentifier": "com.cans4books"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"

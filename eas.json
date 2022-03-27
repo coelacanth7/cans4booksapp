@@ -3,7 +3,19 @@
     "version": ">= 0.48.2"
   },
   "build": {
+    "production": {
+      "node": "16.13.2",
+      "ios": {
+        "cocoapods": "1.11.3"
+      }
+    },
+    "preview": {
+      "extends": "production",
+      "distribution": "internal"
+    },
     "development": {
+      "extends": "production",
+      "developmentClient": "true",
       "distribution": "internal",
       "android": {
         "gradleCommand": ":app:assembleDebug"
@@ -11,11 +23,7 @@
       "ios": {
         "buildConfiguration": "Debug"
       }
-    },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {}
+    }
   },
   "submit": {
     "production": {}
