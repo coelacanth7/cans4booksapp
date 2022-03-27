@@ -11,6 +11,9 @@
       "backgroundColor": "#ffffff"
     },
     "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf",
+      "@react-native-firebase/crashlytics",
       [
         "expo-notifications",
         {
@@ -27,6 +30,7 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "googleServicesFile": "./ios/cans4booksapp/GoogleService-Info.plist",
       "bundleIdentifier": "com.cans4books"
     },
     "android": {

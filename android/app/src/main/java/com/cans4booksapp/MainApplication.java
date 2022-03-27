@@ -1,5 +1,4 @@
-package com.cans4books.app;
-import expo.modules.devlauncher.DevLauncherController;
+package com.cans4booksapp;
 
 import android.app.Application;
 import android.content.Context;
@@ -55,7 +54,6 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
 
-    DevLauncherController.initialize(this, getReactNativeHost());
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
     ApplicationLifecycleDispatcher.onApplicationCreate(this);
   }
@@ -81,7 +79,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.cans4books.app.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.cans4booksapp.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
